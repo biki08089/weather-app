@@ -4,7 +4,7 @@
 
 .container {
   background-color: aqua;
-  background-image: url("./images/mountain.png");
+  background-image: url("/images/mountain.png");
   background-position: center;
   width: 18rem;
   height: 36rem;
