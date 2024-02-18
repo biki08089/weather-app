@@ -1,3 +1,5 @@
 <h1>Weather App</h1>
+<p>Check all the weather related data here.<br> Here all weather related data is comming from a free API.</p>
 
-![Screenshot (133)](https://github.com/biki08089/weather-app/assets/123112453/3ea46d94-22e3-4a49-89f8-64ca49d13009)
+![Screenshot (133)](https://github.com/biki08089/weather-app/assets/123112453/5450fe37-c6ea-44e8-b30a-fe51c2e29908)
+
