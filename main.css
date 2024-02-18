@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  background-color: aqua;
+  background-image: url("./images/mountain.png");
+  background-position: center;
+  width: 18rem;
+  height: 36rem;
+  background-repeat: no-repeat;
+}
+
+.background {
+  background-image: url("./images/container2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.datalist::-webkit-scrollbar {
+  display: none;
+}
+
+.slider_div {
+  animation-name: scrollTop;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes scrollTop {
+  from {
+    top: 23rem;
+  }
+  to {
+    top: 0;
+  }
+}
+.reverse {
+  animation-name: scrollBottom;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes scrollBottom {
+  from {
+    top: 6rem;
+  }
+  to {
+    top: 23rem;
+  }
+}

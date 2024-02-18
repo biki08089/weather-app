@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Current-Weather</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body class="bg-gradient-to-bl from-[#937aef] to-[#E0D9FF] flex justify-center items-center h-[100vh]">
+  <div class="container h-[82vh] w-[88vw] bg-white rounded-[25px] overflow-hidden relative">
+    <form action="" class="mx-[auto] w-[16rem] mt-14">
+      <input id="inputData" type="text" value="bhubaneswar" onkeydown="mykey(event)"
+        class="w-full h-[2.5rem] text-center rounded-md font-sans text-2xl font-medium text-white bg-transparent border-slate-400" />
+    </form>
+    <p id="temp" class="text-white font-sans text-center text-3xl font-medium">
+      °C
+    </p>
+    <p id="min_max" class="text-white font-sans font-light text-center text-lg mt-3">
+      <span id="weather" class="text-[1.3rem]">Mostly Clear</span>
+      <br />
+      <span id="temp_range" class="font-medium text-lg">H:24* L:18*</span>
+    </p>
+    <div class="">
+      <img src="images/House.png" alt="No image" srcset="" class="w-[20rem] h-[14rem] mx-auto mt-1" />
+    </div>
+    <button class="1st invisible lg:visible duration-[700ms] button border-2 border-slate-400 absolute z-10 bottom-[3.7rem] left-1  h-[1.7rem] w-[1.5rem] bg-[#ebe53b5e]  rounded-full">
+      <img class="-rotate-90 h-5 w-6" src="images/arrow.png" alt="" srcset="">
+    </button>
+    <button class="2nd invisible lg:visible duration-[700ms] button border-2 border-slate-400 absolute z-10 bottom-[3.7rem] right-1  h-[1.7rem] w-[1.5rem] bg-[#ebe53b57]  rounded-full">
+      <img class="rotate-90 h-5 w-6" src="images/arrow.png" alt="" srcset="">
+    </button>
+
+
+    <div class="animate  h-[90rem] w-full rounded-3xl absolute top-[23rem] bg-[white] pt-3">
+      <!-- <hr
+          class="w-[1.5rem] outline border-white rounded-sm mx-auto opacity-95"
+        /> -->
+      <div id="slider_button"
+        class="h-[1.5rem] w-[1.5rem] cursor-pointer bg-[#B6BBC4] mx-auto rounded-full flex justify-center items-center animate-bounce">
+        <img src="images/arrow.png" alt="" srcset="" class="arrow w-[18px] h-[19px]" />
+      </div>
+      <p class="forcast text-white pt-2 px-3 text-[12px] font-light font-sans ">
+        <span class="text-[#070205] font-bold text-[1rem]  p-1">City Name</span><span
+          class="float-right text-[black] font-bold text-[1rem]">Temp</span>
+      </p>
+
+      <div class="datalist overflow-scroll mt-3">
+        <ul id="horizontalSlide" class="flex  w-[30rem] h-[8rem] px-5 relative transition tra ">
+
+          <li class=" hourlyForcast relative font-[arial]">
+            <img class="" src="images/now1.svg" alt="No Image1" srcset="" />
+            <p class="absolute top-4 px-1 left-2 text-white font-bold text-sm">9:00</p>
+            <img class="absolute top-10 left-2 h-[40px] w-[38px]" src="images/raining.png" alt="No image" srcset="">
+            <p class="absolute top-20 left-3 mt-[0.2rem] text-white font-bold text-sm">23*C</p>
+
+          </li>
+          <li class="hourlyForcast relative font-[arial]">
+            <img src="images/now1.svg" alt="No Image2" srcset="" />
+            <p class="absolute top-4 left-2 text-white font-bold text-sm">12:00</p>
+            <img class="absolute top-10 left-2 h-[40px] w-[38px]" src="images/raining.png" alt="No image" srcset="">
+            <p class="absolute top-20 left-3 mt-[0.2rem] text-white font-bold text-sm">24*C</p>
+
+
+          </li>
+          <li class="hourlyForcast relative font-[arial]">
+            <img src="images/now1.svg" alt="No Image3" srcset="" />
+            <p class="absolute top-4 px-1 left-1 text-white font-bold text-sm">15:00</p>
+            <img class="absolute top-10 left-2 h-[40px] w-[38px]" src="images/raining.png" alt="No image" srcset="">
+            <p class="absolute top-20 left-3 mt-[0.2rem] text-white font-bold text-sm">25*C</p>
+
+
+          </li>
+          <li class="hourlyForcast relative font-[arial]">
+            <img src="images/now1.svg" alt="No Image4" srcset="" />
+            <p class="absolute top-4 left-2 text-white font-bold text-sm">18:00</p>
+            <img class="absolute top-10 left-2 h-[40px] w-[38px]" src="images/raining.png" alt="No image" srcset="">
+            <p class="absolute top-20 left-3 mt-[0.2rem] text-white font-bold text-sm">26*C</p>
+
+
+          </li>
+          <li class="hourlyForcast relative font-[arial]">
+            <img src="images/now1.svg" alt="No Image5" srcset="" />
+            <p class="absolute top-4 left-2 text-white font-bold text-sm">21:00</p>
+            <img class="absolute top-10 left-2 h-[40px] w-[38px]" src="images/raining.png" alt="No image" srcset="">
+            <p class="absolute top-20 left-3 mt-[0.2rem] text-white font-bold text-sm">27*C</p>
+
+
+          </li>
+          <li class="hourlyForcast relative font-[arial]">
+            <img src="images/now1.svg" alt="No Image6" srcset="" />
+            <p class="absolute top-4 left-2 text-white font-bold text-sm">00:00</p>
+            <img class="absolute top-10 left-2 h-[40px] w-[38px]" src="images/raining.png" alt="No image" srcset="">
+            <p class="absolute top-20 left-3 mt-[0.2rem] text-white font-bold text-sm">28*C</p>
+
+
+          </li>
+          <li class="hourlyForcast relative font-[arial]">
+            <img src="images/now1.svg" alt="No Image" srcset="" />
+            <p class="absolute top-4 left-2 px-1 text-white font-bold text-sm">3:00</p>
+            <img class="absolute top-10 left-2 h-[40px] w-[38px]" src="images/raining.png" alt="No image" srcset="">
+            <p class="absolute top-20 left-3 mt-[0.2rem] text-white font-bold text-sm">29*C</p>
+
+
+          </li>
+        </ul>
+      </div>
+      <div class="h-[17rem] grid grid-rows-2 grid-cols-2 gap-4 px-3 pb-2 text-white text-sm font-[arial] font-light">
+        <div class="p-3 grid-box bg-[#1a141d] h-[8rem] rounded-3xl">
+          <p>Air Pressure</p>
+          <img class="h-[35px] w-[35px] mx-auto mt-4" src="images/barometer.png" alt="No image" srcset="">
+          <p class="pressure text-center mt-2">1014 hPa</p>
+        </div>
+        <div class="p-3 grid-box bg-[#1a141d] h-[8rem] rounded-3xl">
+          <p>Wind</p>
+          <img class="h-[35px] w-[35px] mx-auto mt-4 rounded-full" src="images/aeration.gif" alt="No image" srcset="">
+          <p class="wind text-center mt-2">3.6 m/s</p>
+        </div>
+        <div class="p-3 grid-box bg-[#1a141d] h-[8rem] rounded-3xl">
+          <p>Visibility</p>
+          <img class="h-[38px] w-[38px] mx-auto mt-4" src="images/vision.png" alt="No image" srcset="">
+          <p class="visibility text-center mt-2">10 km</p>
+        </div>
+        <div class="p-3 grid-box bg-[#1a141d] h-[8rem] rounded-3xl">
+          <p>Rainfall</p>
+          <img class="h-[35px] w-[35px] mx-auto mt-4 " src="images/rain.png" alt="No image" srcset="">
+          <p class="rain text-center mt-2">56%</p>
+        </div>
+
+      </div>
+      <div class="text-white flex items-center justify-between h-[3.5rem] bg-[#1a141d] mx-3 mt-2 rounded-2xl px-3">
+        <p>Feels like</p>
+        <div class="flex">
+          <img class="h-[35px] w-[35px]" src="images/thermometer.png" alt="No image" srcset="">
+          <p class="feels_like mt-1">25*c</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
+<!-- bg-gradient-to-bl from-[#f4f3f5] to-[#5609f1] -->
